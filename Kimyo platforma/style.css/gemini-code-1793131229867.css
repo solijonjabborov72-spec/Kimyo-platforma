@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Yuqori navbo'lim */
+.navbar {
+    background-color: #0d9488;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo .icon {
+    font-size: 28px;
+}
+
+.user-stats {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Unvon (Badge) dizayni */
+.badge {
+    background-color: #f59e0b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Asosiy konteyner */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 65px);
+}
+
+/* Chap mundarija */
+.sidebar {
+    width: 280px;
+    background-color: white;
+    border-right: 1px solid #e5e7eb;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #0f766e;
+}
+
+/* Progress bar (O'zlashtirish foizi) dizayni */
+.progress-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: bold;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    background-color: #e2e8f0;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    height: 100%;
+    background-color: #0d9488;
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+.topic-list {
+    list-style: none;
+}
+
+.topic-list li {
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: 0.2s;
+    font-size: 15px;
+}
+
+.topic-list li:hover {
+    background-color: #ccfbf1;
+}
+
+.topic-list li.active {
+    background-color: #0d9488;
+    color: white;
+    font-weight: bold;
+}
+
+/* O'ng tarafdagi kontent */
+.content-area {
+    flex: 1;
+    padding: 30px;
+}
+
+.lesson-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.lesson-card h2 {
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.theory {
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* Mashq blogi */
+.practice-box {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.practice-box h3 {
+    color: #166534;
+    margin-bottom: 10px;
+}
+
+.question {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.options {
+    display: flex;
+    gap: 10px;
+}
+
+.options input {
+    padding: 10px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.btn-check, .btn-login {
+    background-color: #0d9488;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-check:hover, .btn-login:hover {
+    background-color: #0f766e;
+}
+
+/* Ustoz paneli dizayni */
+.btn-admin-toggle {
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-admin-toggle:hover {
+    background-color: #115e59;
+}
+
+.admin-card {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.admin-card h3 {
+    color: #b45309;
+    margin-bottom: 8px;
+}
+
+.admin-card h4 {
+    color: #92400e;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#add-topic-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#add-topic-form input, 
+#add-topic-form textarea {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.btn-danger {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #b91c1c;
+}

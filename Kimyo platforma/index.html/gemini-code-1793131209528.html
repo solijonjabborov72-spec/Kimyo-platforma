@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimyo — O'quv platformasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Yuqori panel (Header) -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="icon">🧪</span>
+            <h1>Kimyo.uz</h1>
+        </div>
+        <div class="user-stats">
+            <span id="badge-title" class="badge">🧪 Novice Kimyogar</span>
+            <span id="score">0 ball</span>
+            <button class="btn-admin-toggle">👨‍🏫 Ustoz paneli</button>
+        </div>
+    </header>
+
+    <!-- Asosiy ishchi hudud -->
+    <div class="main-container">
+        
+        <!-- Chap tomondagi Mundarija (Sidebar) -->
+        <aside class="sidebar">
+            <h2>Mundarija</h2>
+            <!-- Kurs tayyorgarligi foizi -->
+            <div class="progress-box">
+                <div class="progress-info">
+                    <span>Kurs tayyorligi</span>
+                    <span id="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div id="progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+            <ul class="topic-list">
+                <!-- Dinamik to'ldiriladi -->
+            </ul>
+        </aside>
+
+        <!-- O'ng tomondagi Dars va Mashq oynasi -->
+        <main class="content-area">
+            
+            <!-- Ustoz paneli -->
+            <div id="admin-panel" class="admin-card" style="display: none;">
+                <h3>🛠️ Ustozlar paneli</h3>
+                <p>O'quv jarayonini boshqarish paneli.</p>
+                <div class="admin-actions">
+                    <button id="btn-reset-score" class="btn-danger">Ballarni nollash</button>
+                </div>
+                
+                <hr style="margin: 15px 0; border: 0; border-top: 1px solid #ddd;">
+                
+                <h4>➕ Yangi mavzu qo'shish</h4>
+                <form id="add-topic-form">
+                    <input type="text" id="new-title" placeholder="Mavzu nomi..." required>
+                    <textarea id="new-theory" placeholder="Nazariya matni..." rows="3" required></textarea>
+                    <input type="text" id="new-question" placeholder="Amaliy mashq savoli..." required>
+                    <input type="number" id="new-answer" placeholder="To'g'ri javob (son)..." required>
+                    <button type="submit" class="btn-check">Mavzu qo'shish</button>
+                </form>
+            </div>
+
+            <!-- Dars kartochkasi -->
+            <div class="lesson-card">
+                <h2>1-mavzu: Modda va uning xossalari</h2>
+                <div class="theory">
+                    <p>Yuklanmoqda...</p>
+                </div>
+
+                <div class="practice-box">
+                    <h3>✍️ Amaliy mashq</h3>
+                    <p class="question">Savol yuklanmoqda...</p>
+                    
+                    <div class="options">
+                        <input type="number" id="user-answer" placeholder="Javobingizni kiriting...">
+                        <button class="btn-check">Tekshirish</button>
+                    </div>
+                    <div id="result-message"></div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
